@@ -1,0 +1,50 @@
+body {
+  background-color: #e8d6ff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  color: white;
+  font-size: 200px;
+  text-align: center;
+  letter-spacing: 15px;
+  text-decoration: line-through;
+  margin: 30px;
+
+}
+
+input {
+  width: 300px;
+  height: 300px;
+  margin: 100px;
+  float: right;
+  transform: rotate(30deg);
+  font-size: 30px;
+  letter-spacing: 6px;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+ul {
+  margin: 50px;
+  font-size: 30px;
+  letter-spacing: 6px;
+  color: white;
+
+}
+
+li {
+/*  list-style-type: square;*/
+  list-style-type: none;
+}
+
+span {
+  background: blue;
+  margin: 10px;
+  padding: 6px;
+}
+
+.complete {
+  text-decoration: line-through;
+}
