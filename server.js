@@ -20,8 +20,7 @@ app.set('view engine', 'hbs');
 //  //   CREATE   //
 // ////////////////
 app.get('/', function(request, response, next) {
-  // render the index.hbs template and replace {{title}} with 'MongoDB - Basics'
-  response.render('index', {title: 'MongoDB - Basics'});
+  response.render('index');
 });
 
 //
