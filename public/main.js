@@ -1,5 +1,9 @@
 console.log ("linked!");
 
+
+// =============================
+// PSEUDO CODE
+// =============================
 // enter
 // get the input value
 // append to the ul
@@ -14,19 +18,21 @@ $(document).ready(function(){
         console.log('enter');
         var $value = $(this).val();
         console.log($value);
-        $value.appendTo('#list');
+        $.get('/', function(res){
+          $('ul').append('<li>' + $value + '</li>');
+        })
     }
+  });
 });
 
-});
 
 
 
 
 
-
-
-
+// =============================
+// OLD JAVASCRIPT
+// =============================
 // var handleEnter = function(event) {
 //   if(event.keyCode === 13) {
 //     // create element
