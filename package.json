@@ -19,6 +19,7 @@
   "homepage": "https://github.com/abimunoz/project_02_crud_app#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "handlebars": "^4.0.6"
+    "handlebars": "^4.0.6",
+    "hbs": "^4.0.1"
   }
 }
