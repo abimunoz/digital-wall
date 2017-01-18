@@ -19,7 +19,7 @@ $(document).ready(function(){
         var $value = $(this).val();
         console.log($value);
         $.get('/', function(res){
-          $('ul').append('<li>' + $value + '</li>');
+          $('ul').append('<li>' + '<span class="remove">x</span>' + $value + '</li>');
         })
     }
   });
