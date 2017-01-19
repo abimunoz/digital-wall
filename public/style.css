@@ -33,6 +33,9 @@ ul {
   color: white;
 
 }
+form, li, button {
+  display: inline-block;
+}
 
 li {
 /*  list-style-type: square;*/

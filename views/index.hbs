@@ -4,7 +4,7 @@
   {{#each todos}}
   <form method=post action='/delete/{{_id}}'><button>X</button></form>
   <li>
-    <div contenteditable="true">
+    <div class="edit" contenteditable="true">
       {{description}}
     </div>
   </li>

@@ -8,6 +8,7 @@ var morgan = require('morgan');
 var path = require('path');
 var objectId = require('mongodb').ObjectID;
 var favicon = require('serve-favicon');
+// var bootstrap = require('bootstrap');
 
 
 
@@ -42,7 +43,6 @@ app.post('/create', function(req, res, next) {
   console.log(req.body)
   var task = {
     description : req.body.description,
-    isDone : false,
     createdAt: new Date()
   };
 
@@ -94,14 +94,23 @@ app.post('/delete/:id', function(req, res, next) {
   ////////////////
  //   UPDATE   //
 ////////////////
-app.post('/update/:id', function(req, res, next) {
-  mongo.connect(url, function(err, db) {
-    var id = req.params.id;
-    db.collection('data').updateOne({"_id": objectId(id)}, function(err, result) {
-      db.close();
-      res.redirect('/');
-    });
-  });
+app.post('/update', function(req, res, next) {
+  var task = {
+    description : req.body.description,
+    createdAt: new Date()
+  };
+
+ var id = req.body.id;
+
+ mongo.connect(url, function(err, db) {
+   assert.equal(null, err);
+   db.collection('data').updateOne({"_id": objectId(id)}, {$set: task}, function(err, result) {
+     assert.equal(null, err);
+     console.log('Item updated');
+     db.close();
+     res.redirect('/');
+   });
+ });
 });
 
 
