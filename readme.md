@@ -2,20 +2,20 @@
 
 #### Overview
 
-This second project is your first foray into building a full-stack application. 
-You'll be building a web application, which means you'll learn about what it takes 
+This second project is your first foray into building a full-stack application.
+You'll be building a web application, which means you'll learn about what it takes
 to build a functional application from the ground up yourself.
 
-This is exciting! It's a lot, but we've given you the tools over the past few weeks, 
-and you get to decide what you do with it. And you get to be creative in choosing 
+This is exciting! It's a lot, but we've given you the tools over the past few weeks,
+and you get to decide what you do with it. And you get to be creative in choosing
 what sort of application you want to build!
 
-You will be working individually for this project, and you'll be designing the app 
-yourself. We hope you'll exercise creativity on this project, sketch some 
-wireframes before you start, and write user stories to define what your users 
+You will be working individually for this project, and you'll be designing the app
+yourself. We hope you'll exercise creativity on this project, sketch some
+wireframes before you start, and write user stories to define what your users
 will want to do with the app.
 
-Remember to keep things small and focus on mastering the fundamentals – 
+Remember to keep things small and focus on mastering the fundamentals –
 scope creep/feature creep is the biggest pitfall for any project!
 
 #### Technical Requirements
@@ -55,9 +55,9 @@ Suggested Ways to Get Started
 - Plan
 - Write User stories
 
-> User stories define what a specific type of user wants to accomplish with your application. 
-> It's tempting to just make them todo lists for what needs to get done, 
-> but if you keep them small & focused on what a user cares about from their perspective, 
+> User stories define what a specific type of user wants to accomplish with your application.
+> It's tempting to just make them todo lists for what needs to get done,
+> but if you keep them small & focused on what a user cares about from their perspective,
 > it'll help you know what to build!
 
 - Pseudo code
@@ -78,16 +78,16 @@ Build something for yourself that tracks some data!
 
 The world is a depressing place.
 
-Your task is to create an app that will allow people to create and share "cheerups" - 
-happy little quips to brighten other peoples' days. Cheerups will be small - 
-limited to 139 characters. Members will be able to promote Cheerups that they like 
+Your task is to create an app that will allow people to create and share "cheerups" -
+happy little quips to brighten other peoples' days. Cheerups will be small -
+limited to 139 characters. Members will be able to promote Cheerups that they like
 and maybe even boost the reputation of the Cheerupper.
 
 ### Bookmarket
 
 You will create an application where users can bookmark links they want to keep.
 
-But what if users could trade bookmarks for other bookmarks? Or sell bookmarks for points? 
+But what if users could trade bookmarks for other bookmarks? Or sell bookmarks for points?
 Or send bookmarks to your friends. Or something even crazier.
 
 ### FourSquare Clone
@@ -96,3 +96,16 @@ MongoDB is great for location based data like latitude and longitude.
 Allow users to report on their location and find nearby friends.
 
 
+ASA
+When I visit the site
+I want to see my todos
+So that I can keep track of them
+
+ASA
+I want to be able to quickly add a to do
+
+ASA
+I want to be able to mark my todos as I complete task
+
+ASA
+I want to be able to delete todos I don't want to do

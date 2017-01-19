@@ -3,7 +3,7 @@ var mongo = require('mongodb').MongoClient;
 var hbs = require('express-handlebars');
 var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/PROJECT2';
 var bodyParser = require('body-parser');
-var logger = require('morgan');
+var morgan = require('morgan');
 // var assert = require('assert');
 var path = require('path');
 var objectId = require('mongodb').ObjectID;
@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Use Handlebars syntax {{ }}
 app.set('view engine', 'hbs');
 
-app.use(logger('dev'));
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
@@ -92,6 +92,25 @@ app.post('/delete/:id', function(req, res, next) {
     });
   });
 });
+
+  ////////////////
+ //   UPDATE   //
+////////////////
+app.post('/update/:id', function(req, res, next) {
+  mongo.connect(url, function(err, db) {
+    var id = req.params.id;
+    db.collection('data').update({"_id": objectId(id)},{$set:{isDone:true}}, function(err, result) {
+      db.close();
+      res.redirect('/');
+    });
+  });
+});
+
+
+// .todo
+// get objectId
+// update isDone to TRUE
+
 
   ////////////////
  //    PORT    //
