@@ -39,12 +39,25 @@ li {
   list-style-type: none;
 }
 
-span {
+/*span {
   background: blue;
   margin: 10px;
   padding: 6px;
-}
+}*/
 
 .complete {
   text-decoration: line-through;
+}
+
+
+button {
+  background: blue;
+  padding: 20px;
+  boder: none;
+  color: white;
+  font-size: 20px;
+}
+
+button:focus {
+  outline: none;
 }

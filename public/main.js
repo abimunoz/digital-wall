@@ -1,25 +1,16 @@
 console.log ("linked!");
 
 
-// =============================
-// PSEUDO CODE
-// =============================
-// enter
-// get the input value
-// append to the ul
-// var $input = $('#input').val();
-
-
 $(document).ready(function(){
   $('#input').keyup(function(e){
-    if(e.keyCode == 13)
-    {
-        $(this).trigger("enterKey");
+    if (e.keyCode == 13) {
+        // $(this).trigger("enterKey");
         console.log('enter');
-        var $value = $(this).val();
-        console.log($value);
-        $.get('/', function(res){
-          $('ul').append('<li>' + '<span class="remove">x</span>' + $value + '</li>');
+        var $item = $(this).val();
+        console.log($item);
+        $.post('/create', {description: $item},function(res){
+          console.log(res);
+          $('#list').append('<li>' + '<span class="remove">x</span>' + $item + '</li>');
         })
     }
   });
