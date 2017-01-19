@@ -55,6 +55,7 @@ Suggested Ways to Get Started
 - Plan
 - Write User stories
 
+
 > User stories define what a specific type of user wants to accomplish with your application.
 > It's tempting to just make them todo lists for what needs to get done,
 > but if you keep them small & focused on what a user cares about from their perspective,
@@ -94,6 +95,7 @@ Or send bookmarks to your friends. Or something even crazier.
 
 MongoDB is great for location based data like latitude and longitude.
 Allow users to report on their location and find nearby friends.
+
 
 
 ASA

@@ -7,6 +7,7 @@ var morgan = require('morgan');
 // var assert = require('assert');
 var path = require('path');
 var objectId = require('mongodb').ObjectID;
+var favicon = require('serve-favicon');
 
 
 
@@ -16,12 +17,13 @@ var app = express();
   ////////////////
  // MIDDLEWARE //
 ////////////////
-// app.use(morgan('dev'));
-// app.use(express.static(__dirname + '/public'));
-// app.use(express.static(__dirname + '/views'));
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
-// app.set('view engine', 'hbs');
+app.use(morgan('dev'));
+app.use(favicon(__dirname + '/public/dinosaur.ico'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 //view engine set-up
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts/'}));
@@ -30,11 +32,6 @@ app.set('views', path.join(__dirname, 'views'));
 // Use Handlebars syntax {{ }}
 app.set('view engine', 'hbs');
 
-app.use(morgan('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 
   ////////////////
