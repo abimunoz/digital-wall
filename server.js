@@ -103,9 +103,9 @@ app.post('/update', function(req, res, next) {
  var id = req.body.id;
 
  mongo.connect(url, function(err, db) {
-   assert.equal(null, err);
+  //  assert.equal(null, err);
    db.collection('data').updateOne({"_id": objectId(id)}, {$set: task}, function(err, result) {
-     assert.equal(null, err);
+    //  assert.equal(null, err);
      console.log('Item updated');
      db.close();
      res.redirect('/');

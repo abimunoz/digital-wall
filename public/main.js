@@ -19,8 +19,13 @@ $(document).ready(function(){
     if (e.keyCode === 13) {
       e.preventDefault();
       console.log('enter');
-      var $newText = $(this).text();
-      console.log($newText);
+      var $edit = $(this).text();
+      console.log($edit);
+
+    $.post('/update', {description: $edit}, function(res){
+      console.log('res =', res);
+    });
+
 
     }
   });
