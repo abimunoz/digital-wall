@@ -107,11 +107,6 @@ app.post('/update/:id', function(req, res, next) {
 });
 
 
-// .todo
-// get objectId
-// update isDone to TRUE
-
-
   ////////////////
  //    PORT    //
 ////////////////
