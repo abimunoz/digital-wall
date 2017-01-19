@@ -41,6 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
  //   CREATE   //
 ////////////////
 app.post('/create', function(req, res, next) {
+  console.log ('this is the post request')
   console.log(req.body)
   var task = {
     description : req.body.description,
@@ -52,9 +53,9 @@ app.post('/create', function(req, res, next) {
     // assert.equal(null, err);
     db.collection('data').insertOne(task, function(err, result) {
       // assert.equal(null, err);
-      console.log('Item inserted');
+      console.log('Item inserted', result.insertedId);
       db.close();
-      res.json(result);
+      res.json(result.insertedId);
     })
   });
 });
