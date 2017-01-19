@@ -97,7 +97,7 @@ app.post('/delete/:id', function(req, res, next) {
 app.post('/update/:id', function(req, res, next) {
   mongo.connect(url, function(err, db) {
     var id = req.params.id;
-    db.collection('data').update({"_id": objectId(id)},{$set:{isDone:true}}, function(err, result) {
+    db.collection('data').updateOne({"_id": objectId(id)}, function(err, result) {
       db.close();
       res.redirect('/');
     });

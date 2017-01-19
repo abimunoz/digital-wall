@@ -4,7 +4,7 @@ $(document).ready(function(){
       var $item = $(this).val();
       $.post('/create', {description: $item},function(res){
         console.log('res =', res);
-      $('#list').append( '<form method=post action="/delete/'+ res + '"><button>X</button></form>' + '<li class="todo">' + $item + '</li>');
+      $('#list').append( '<form method=post action="/delete/'+ res + '"><button>X</button></form>' + '<li>' + '<div contenteditable="true">'+ $item + '</div>' + '</li>');
       e.currentTarget.value = " "
       })
     }
