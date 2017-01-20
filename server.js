@@ -22,11 +22,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts/'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
 
 
   ////////////////
@@ -41,9 +39,7 @@ app.post('/create', function(req, res, next) {
   };
 
   mongo.connect(url, function(err, db){
-    // assert.equal(null, err);
     db.collection('data').insertOne(task, function(err, result) {
-      // assert.equal(null, err);
       console.log('Item inserted', result.insertedId);
       db.close();
       res.json(result.insertedId);
@@ -52,21 +48,17 @@ app.post('/create', function(req, res, next) {
 });
 
 
-
   ////////////////
  //    READ    //
 ////////////////
 app.get('/', function(req, res, next) {
   mongo.connect(url, function(err, db) {
-    // assert.equal(null, err);
     db.collection('data').find({}).toArray(function(err, items){
-      // assert.equal(null, err);
       db.close();
       res.render('index', {todos: items});
     });
   });
 });
-
 
 
   ////////////////
@@ -75,9 +67,7 @@ app.get('/', function(req, res, next) {
 app.post('/delete/:id', function(req, res, next) {
   mongo.connect(url, function(err, db) {
     var id = req.params.id;
-    // assert.equal(null, err);
     db.collection('data').deleteOne({"_id": objectId(id)}, function(err, result) {
-      // assert.equal(null, err);
       console.log("Item deleted: " + id);
       db.close();
       res.redirect('/');
@@ -85,16 +75,15 @@ app.post('/delete/:id', function(req, res, next) {
   });
 });
 
+
   ////////////////
  //   UPDATE   //
 ////////////////
 app.post('/update', function(req, res, next) {
  mongo.connect(url, function(err, db) {
-  //  assert.equal(null, err);
   var id = req.body.oid;
   var toDo = {description: req.body.description};
    db.collection('data').updateOne({"_id": objectId(id)}, {$set: toDo}, function(err, result) {
-    //  assert.equal(null, err);
      console.log('Item updated');
      db.close();
      res.redirect('/');
