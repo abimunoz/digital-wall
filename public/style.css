@@ -10,7 +10,6 @@ h1 {
   letter-spacing: 15px;
   text-decoration: line-through;
   margin: 30px;
-
 }
 
 input {
@@ -25,37 +24,32 @@ input {
   font-family: 'Roboto Mono', monospace;
 }
 
+.edit {
+  margin:30px;
+}
 
 ul {
   margin: 50px;
   font-size: 30px;
   letter-spacing: 6px;
   color: white;
-
 }
+
 form, li, button {
   display: inline-block;
 }
 
 li {
-/*  list-style-type: square;*/
   list-style-type: none;
 }
-
-/*span {
-  background: blue;
-  margin: 10px;
-  padding: 6px;
-}*/
 
 .complete {
   text-decoration: line-through;
 }
 
-
 button {
   background: blue;
-  padding: 20px;
+  padding: 15px;
   boder: none;
   color: white;
   font-size: 20px;
