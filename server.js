@@ -4,12 +4,9 @@ var hbs = require('express-handlebars');
 var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/PROJECT2';
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
-// var assert = require('assert');
 var path = require('path');
 var objectId = require('mongodb').ObjectID;
 var favicon = require('serve-favicon');
-// var bootstrap = require('bootstrap');
-
 
 
 var app = express();
@@ -22,15 +19,12 @@ app.use(morgan('dev'));
 app.use(favicon(__dirname + '/public/dinosaur.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//view engine set-up
+
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts/'}));
-// server .hbs templates from views with res.render
 app.set('views', path.join(__dirname, 'views'));
-// Use Handlebars syntax {{ }}
 app.set('view engine', 'hbs');
 
 
@@ -95,16 +89,11 @@ app.post('/delete/:id', function(req, res, next) {
  //   UPDATE   //
 ////////////////
 app.post('/update', function(req, res, next) {
-  var task = {
-    description : req.body.description,
-    createdAt: new Date()
-  };
-
- var id = req.body.id;
-
  mongo.connect(url, function(err, db) {
   //  assert.equal(null, err);
-   db.collection('data').updateOne({"_id": objectId(id)}, {$set: task}, function(err, result) {
+  var id = req.body.oid;
+  var toDo = {description: req.body.description};
+   db.collection('data').updateOne({"_id": objectId(id)}, {$set: toDo}, function(err, result) {
     //  assert.equal(null, err);
      console.log('Item updated');
      db.close();

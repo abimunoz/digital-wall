@@ -4,16 +4,12 @@ $(document).ready(function(){
       var $item = $(this).val();
       $.post('/create', {description: $item},function(res){
         console.log('res =', res);
-      $('#list').append( '<form method=post action="/delete/'+ res + '"><button>X</button></form>' + '<li>' + '<div class="edit" contenteditable="true">'+ $item + '</div>' + '</li>');
+      $('#list').append( '<form method=post action="/delete/'+ res + '"><button>X</button></form>' + ' ' + '<li>' + '<div class="edit" contenteditable="true">'+ $item + '</div>' + '</li>');
       e.currentTarget.value = " "
       })
     }
   });
 
-  // STRIKETHROUGH TEXT ON CLICK
-  // $('.todo').on('click', function(e) {
-  //   $(this).toggleClass('complete');
-  // });
 
   $('.edit').keyup(function(e){
     if (e.keyCode === 13) {
@@ -21,8 +17,9 @@ $(document).ready(function(){
       console.log('enter');
       var $edit = $(this).text();
       console.log($edit);
+      var oid = $(this).attr('oid');
 
-    $.post('/update', {description: $edit}, function(res){
+    $.post('/update', {description: $edit, oid: oid}, function(res){
       console.log('res =', res);
     });
 
