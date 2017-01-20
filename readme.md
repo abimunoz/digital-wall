@@ -95,19 +95,3 @@ Or send bookmarks to your friends. Or something even crazier.
 
 MongoDB is great for location based data like latitude and longitude.
 Allow users to report on their location and find nearby friends.
-
-
-
-ASA
-When I visit the site
-I want to see my todos
-So that I can keep track of them
-
-ASA
-I want to be able to quickly add a to do
-
-ASA
-I want to be able to mark my todos as I complete task
-
-ASA
-I want to be able to delete todos I don't want to do

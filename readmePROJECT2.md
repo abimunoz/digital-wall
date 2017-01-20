@@ -1,34 +1,28 @@
 https://floating-harbor-32363.herokuapp.com/
 
+
 ### OVERVIEW
 TO DO APP
+![](assets/assets1.png?raw=true)
+
 
 ###TECHNOLOGIES
-HBS
-CSS
-JS
-NODE
-EXPRESS
-MONGODB
+JS, Node, Express, MongoDB, Handlebars, CSS, AJAX
+
 
 ###WIREFRAMES
-      to do
+![](assets/assets2.png?raw=true)
 
-  x ______         |==============|
-  x ______         |==============|
-  x ______
 
 ###USER STORIES
 ASA
-When I visit the site
-I want to see my to-do's
-So that I can keep track of them
+When I visit the site I want to see my to-do's
 
 ASA
 I want to be able to quickly add a to-do
 
 ASA
-I want to be able to mark my to-do's as I complete task
+I want to be able to edit existing to-do's
 
 ASA
 I want to be able to delete to-do's I don't want to do
