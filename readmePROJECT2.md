@@ -1,5 +1,7 @@
 https://floating-harbor-32363.herokuapp.com/
-### <iframe src="//giphy.com/embed/l41lYs6dLc19noLeg" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/afv-dog-jump-kayak-l41lYs6dLc19noLeg">via GIPHY</a></p>
+
+Markup :  Common text
+<iframe src="//giphy.com/embed/l41lYs6dLc19noLeg" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/afv-dog-jump-kayak-l41lYs6dLc19noLeg">via GIPHY</a></p>
 
 
 ### OVERVIEW
