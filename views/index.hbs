@@ -1,8 +1,8 @@
 <h1>to do</h1>
 <input class="form-control" id='input'>
-<ul id= 'list'>
+<ul id="list">
   {{#each todos}}
-  <form method=post action='/delete/{{_id}}'><button>X</button></form>
+  <form method="post" action="/delete/{{_id}}"><button>X</button></form>
   <li>
     <div class='edit' contenteditable='true' oid='{{_id}}'>
       {{description}}

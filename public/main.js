@@ -4,17 +4,28 @@ $(document).ready(function(){
       var $item = $(this).val();
       $.post('/create', {description: $item},function(res){
         console.log('res =', res);
-      $('#list').append( '<form method=post action="/delete/'+ res + '"><button>X</button></form>' + ' ' + '<li>' + '<div class="edit" contenteditable="true">'+ $item + '</div>' + '</li>');
+      var todo = (`
+        <form method=post action="/delete/${res}">
+          <button>X</button>
+        </form>
+        <li>
+          <div class="edit" contenteditable="true">
+            ${$item}
+          </div>
+        </li>
+      `);
+      $('#list').append(todo);
       e.currentTarget.value = " "
       })
     }
   });
 
 
-  $('.edit').keyup(function(e){
+  $('#list').on('keyup', '.edit', function(e){
     if (e.keyCode === 13) {
       e.preventDefault();
       console.log('enter');
+      $(this).blur();
       var $edit = $(this).text();
       console.log($edit);
       var oid = $(this).attr('oid');

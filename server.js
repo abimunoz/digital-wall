@@ -86,7 +86,7 @@ app.post('/update', function(req, res, next) {
    db.collection('data').updateOne({"_id": objectId(id)}, {$set: toDo}, function(err, result) {
      console.log('Item updated');
      db.close();
-     res.redirect('/');
+     res.json(result);
    });
  });
 });
