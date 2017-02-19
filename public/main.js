@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $('#input').keyup(function(e){
+  $('#text').keyup(function(e){
     if (e.keyCode == 13) {
-      var $content = $(this).val();
-      $.post('/create', {description: $content},function(res){
+      var $text = $(this).val();
+      $.post('/create', {text: $text},function(res){
         console.log('res =', res);
       var post = (`
         <form method=post action="/delete/${res}">
@@ -10,7 +10,7 @@ $(document).ready(function(){
         </form>
         <li>
           <div class="edit" contenteditable="true">
-            ${$content}
+            ${$text}
           </div>
         </li>
       `);
@@ -30,7 +30,7 @@ $(document).ready(function(){
       console.log($edit);
       var id = $(this).attr('id');
 
-    $.post('/update', {description: $edit, id: id}, function(res){
+    $.post('/update', {text: $edit, id: id}, function(res){
       console.log('res =', res);
     });
 

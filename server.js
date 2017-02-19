@@ -34,7 +34,7 @@ app.post('/create', function(req, res, next) {
   console.log ('this is the post request')
   console.log(req.body)
   var entry = {
-    description : req.body.description,
+    text : req.body.text,
     createdAt: new Date()
   };
 
@@ -82,8 +82,8 @@ app.post('/delete/:id', function(req, res, next) {
 app.post('/update', function(req, res, next) {
  mongo.connect(url, function(err, db) {
   var id = req.body.id;
-  var content = {description: req.body.description};
-   db.collection('data').updateOne({"_id": objectId(id)}, {$set: content}, function(err, result) {
+  var text = {text: req.body.text};
+   db.collection('data').updateOne({"_id": objectId(id)}, {$set: text}, function(err, result) {
      console.log('Item updated');
      db.close();
      res.json(result);

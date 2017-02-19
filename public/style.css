@@ -12,9 +12,10 @@ h1 {
   margin: 30px;
 }
 
-input {
-  width: 300px;
-  height: 300px;
+.form {
+  /*background: black;*/
+  width: 200px;
+  height: 200px;
   margin: 100px;
   float: right;
   transform: rotate(30deg);
@@ -24,8 +25,18 @@ input {
   font-family: 'Roboto Mono', monospace;
 }
 
+input {
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+  font-size: 20px;
+  letter-spacing: 6px;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+}
+
 .edit {
-  margin:30px;
+  margin: 30px;
 }
 
 ul {
