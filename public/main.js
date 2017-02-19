@@ -28,9 +28,9 @@ $(document).ready(function(){
       $(this).blur();
       var $edit = $(this).text();
       console.log($edit);
-      var oid = $(this).attr('oid');
+      var id = $(this).attr('id');
 
-    $.post('/update', {description: $edit, oid: oid}, function(res){
+    $.post('/update', {description: $edit, id: id}, function(res){
       console.log('res =', res);
     });
 
