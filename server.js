@@ -34,7 +34,9 @@ app.post('/create', function(req, res, next) {
   console.log ('this is the post request')
   console.log(req.body)
   var entry = {
-    text : req.body.text,
+    // name: req.body.name,
+    text: req.body.text,
+    // media: req.body.media,
     createdAt: new Date()
   };
 
