@@ -33,13 +33,13 @@ app.set('view engine', 'hbs');
 app.post('/create', function(req, res, next) {
   console.log ('this is the post request')
   console.log(req.body)
-  var task = {
+  var entry = {
     description : req.body.description,
     createdAt: new Date()
   };
 
   mongo.connect(url, function(err, db){
-    db.collection('data').insertOne(task, function(err, result) {
+    db.collection('data').insertOne(entry, function(err, result) {
       console.log('Item inserted', result.insertedId);
       db.close();
       res.json(result.insertedId);
