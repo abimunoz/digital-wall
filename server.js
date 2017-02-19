@@ -55,7 +55,7 @@ app.get('/', function(req, res, next) {
   mongo.connect(url, function(err, db) {
     db.collection('data').find({}).toArray(function(err, items){
       db.close();
-      res.render('index', {todos: items});
+      res.render('index', {posts: items});
     });
   });
 });
@@ -82,8 +82,8 @@ app.post('/delete/:id', function(req, res, next) {
 app.post('/update', function(req, res, next) {
  mongo.connect(url, function(err, db) {
   var id = req.body.oid;
-  var toDo = {description: req.body.description};
-   db.collection('data').updateOne({"_id": objectId(id)}, {$set: toDo}, function(err, result) {
+  var content = {description: req.body.description};
+   db.collection('data').updateOne({"_id": objectId(id)}, {$set: content}, function(err, result) {
      console.log('Item updated');
      db.close();
      res.json(result);

@@ -4,7 +4,7 @@ $(document).ready(function(){
       var $item = $(this).val();
       $.post('/create', {description: $item},function(res){
         console.log('res =', res);
-      var todo = (`
+      var post = (`
         <form method=post action="/delete/${res}">
           <button>X</button>
         </form>
@@ -14,14 +14,14 @@ $(document).ready(function(){
           </div>
         </li>
       `);
-      $('#list').append(todo);
+      $('#all-posts').append(post);
       e.currentTarget.value = " "
       })
     }
   });
 
 
-  $('#list').on('keyup', '.edit', function(e){
+  $('#all-posts').on('keyup', '.edit', function(e){
     if (e.keyCode === 13) {
       e.preventDefault();
       console.log('enter');
