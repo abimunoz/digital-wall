@@ -1,8 +1,8 @@
 $(document).ready(function(){
   $('#input').keyup(function(e){
     if (e.keyCode == 13) {
-      var $item = $(this).val();
-      $.post('/create', {description: $item},function(res){
+      var $content = $(this).val();
+      $.post('/create', {description: $content},function(res){
         console.log('res =', res);
       var post = (`
         <form method=post action="/delete/${res}">
@@ -10,7 +10,7 @@ $(document).ready(function(){
         </form>
         <li>
           <div class="edit" contenteditable="true">
-            ${$item}
+            ${$content}
           </div>
         </li>
       `);
