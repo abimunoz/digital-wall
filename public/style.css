@@ -5,23 +5,24 @@ body {
 
 h1 {
   color: white;
-  font-size: 200px;
+  font-size: 80px;
   text-align: center;
-  letter-spacing: 15px;
+  letter-spacing: 30px;
   text-decoration: line-through;
   margin: 30px;
 }
 
 input {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 100px;
   float: right;
   transform: rotate(30deg);
-  font-size: 30px;
+  font-size: 15px;
   letter-spacing: 6px;
   border: none;
   font-family: 'Roboto Mono', monospace;
+  text-align: center;
 }
 
 .edit {
@@ -50,7 +51,7 @@ li {
 button {
   background: blue;
   padding: 15px;
-  boder: none;
+  border: none;
   color: white;
   font-size: 20px;
 }
