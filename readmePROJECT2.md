@@ -1,28 +1,35 @@
-https://floating-harbor-32363.herokuapp.com/
+# [To Do Full-stack App](https://floating-harbor-32363.herokuapp.com/)
 
-
+---
 ## Overview
-**YEAR** _ 2016
-
-**ROLE** _ Full-stack Developer & Visual Designer
-
-**DESCRIPTION** _ My first full-stack application where users can create, edit and delete to-dos
-
-VIEW SITE or VIEW CODE _ Built in a one week sprint
+Full-stack web application where users can create, edit and delete to-dos, built during a one week sprint
 ![](assets/assets1.png?raw=true)
 
+---
+## Installation
+Technologies used: HTML5, CSS3, JavaScript, jQuery, AJAX, MongoDB, Express, Handlebars.js, Node.js
 
-## Technologies Used
-J Node, Express, MongoDB, Handlebars.js, CSS, AJAX
+* Clone or fork this repository
 
+* Make sure you have the following technologies installed on your computer:
+ * [MongoDB](https://www.mongodb.com/download-center#community), [node.js](https://nodejs.org/) and [express.js](https://expressjs.com/)
 
-## Wireframes
+* Run `$ npm install` to install all dependencies
+
+* Then to run on your local machine
+ * Open a new tab in your terminal and run `$ nodemon`
+ * Open another tab in your terminal and simultaneously run `$ mongod`
+
+---
+## Design
+This is my first web app. The goal of this project was to incorporate the four basic functions of persistent storage: create, read, update, and delete. For this project I focused on creating custom CSS and implementing a user interface that was easy to navigate and use. The design of this application was was guided by the user stories.
+
+**User Stories**
+
+* As a user I want to be able to create a new to-do
+* As a user I want to be able to update my to-dos
+* As a user I want to be able to delete individual to-dos
+* As a user I want to be able to view all of my to-dos
+
+**User Interface**
 ![](assets/assets2.png?raw=true)
-
-
-## User Stories
-As a user :
-- When I visit the site I want to see my to-do's
-- I want to be able to quickly add a to-do
-- I want to be able to edit existing to-do's
-- I want to be able to delete to-do's I don't want to do
