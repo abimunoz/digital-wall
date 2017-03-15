@@ -37,4 +37,10 @@ For this project I focused on creating custom CSS and implementing a user interf
 * As a user I want to be able to view all of my to-dos
 
 **User Interface**
+
+Screenshots that illustrate the evolution of the user interface
+
 ![](assets/assets2.png?raw=true)
+![](assets/assets3.png?raw=true)
+![](assets/assets4.png?raw=true)
+![](assets/assets5.png?raw=true)
