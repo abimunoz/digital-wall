@@ -1,10 +1,13 @@
 # [To Do Full-stack App](https://floating-harbor-32363.herokuapp.com/)
 Full-stack web application where users can create, edit and delete to-dos, built during a one week sprint
 
+
+
 ## Overview
 This is my first web app. The goal of this project was to incorporate the four basic functions of persistent storage: create, read, update, and delete.
 
 ![](assets/assets1.png?raw=true)
+
 
 
 ## Installation
@@ -20,6 +23,7 @@ Technologies used: HTML5, CSS3, JavaScript, jQuery, AJAX, MongoDB, Express, Hand
 * Then to run on your local machine
  * Open a new tab in your terminal and run `$ nodemon`
  * Open another tab in your terminal and simultaneously run `$ mongod`
+
 
 
 ## Design
