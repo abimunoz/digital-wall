@@ -19,7 +19,7 @@ HTML5 | CSS3 | JavaScript | jQuery | AJAX | MongoDB | Express | Handlebars.js | 
 
 * Run `$ npm install` to install all dependencies
 
-* Then to run on your local machine
+* To run on locally
   * Open a new tab in your terminal and run `$ nodemon`
   * Open another tab in your terminal and simultaneously run `$ mongod`
 
