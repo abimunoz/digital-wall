@@ -22,6 +22,7 @@ input {
   letter-spacing: 6px;
   border: none;
   font-family: 'Roboto Mono', monospace;
+  text-align: center;
 }
 
 .edit {
