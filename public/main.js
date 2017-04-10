@@ -1,40 +1,38 @@
 $(document).ready(function(){
   $('#input').keyup(function(e){
     if (e.keyCode == 13) {
-      var $item = $(this).val();
-      $.post('/create', {description: $item},function(res){
+      var content = $(this).val();
+      $.post('/create', {description: content},function(res){
         console.log('res =', res);
-      var todo = (`
+        console.log('content', content);
+      var post = (`
         <form method=post action="/delete/${res}">
           <button>X</button>
         </form>
         <li>
           <div class="edit" contenteditable="true">
-            ${$item}
+            ${content}
           </div>
-        </li>
-      `);
-      $('#list').append(todo);
+        </li>`);
+      $('#all-posts').append(post);
       e.currentTarget.value = " "
       })
     }
   });
 
 
-  $('#list').on('keyup', '.edit', function(e){
+  $('#all-posts').on('keyup', '.edit', function(e){
     if (e.keyCode === 13) {
       e.preventDefault();
       console.log('enter');
       $(this).blur();
       var $edit = $(this).text();
       console.log($edit);
-      var oid = $(this).attr('oid');
+      var id = $(this).attr('id');
 
-    $.post('/update', {description: $edit, oid: oid}, function(res){
+    $.post('/update', {description: $edit, id: id}, function(res){
       console.log('res =', res);
     });
-
-
     }
   });
 });
