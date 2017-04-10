@@ -1,19 +1,19 @@
 $(document).ready(function(){
   $('#input').keyup(function(e){
     if (e.keyCode == 13) {
-      var $content = $(this).val();
-      $.post('/create', {description: $content},function(res){
+      var content = $(this).val();
+      $.post('/create', {description: content},function(res){
         console.log('res =', res);
+        console.log('content', content);
       var post = (`
         <form method=post action="/delete/${res}">
           <button>X</button>
         </form>
         <li>
           <div class="edit" contenteditable="true">
-            ${$content}
+            ${content}
           </div>
-        </li>
-      `);
+        </li>`);
       $('#all-posts').append(post);
       e.currentTarget.value = " "
       })
@@ -33,8 +33,6 @@ $(document).ready(function(){
     $.post('/update', {description: $edit, id: id}, function(res){
       console.log('res =', res);
     });
-
-
     }
   });
 });
