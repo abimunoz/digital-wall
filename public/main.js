@@ -1,19 +1,27 @@
 $(document).ready(function(){
+  $('#add').click(function(e){
+    $('#input').toggle();
+  });
+
+
   $('#input').keyup(function(e){
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       var content = $(this).val();
       $.post('/create', {description: content},function(res){
         console.log('res =', res);
         console.log('content', content);
       var post = (`
-        <form method=post action="/delete/${res}">
-          <button>X</button>
-        </form>
-        <li>
-          <div class="edit" contenteditable="true">
-            ${content}
-          </div>
-        </li>`);
+        <div class="x">
+          <form method=post action="/delete/${res}"><button class="remove">X</button></form>
+        </div>
+        <div class="content">
+          <li>
+            <div class="edit" contenteditable="true">
+              ${content}
+            </div>
+          </li>
+        </div>`
+      );
       $('#all-posts').append(post);
       e.currentTarget.value = " "
       })
