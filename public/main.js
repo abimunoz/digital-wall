@@ -1,11 +1,11 @@
 $(document).ready(function(){
   $('#add').click(function(e){
     $('#input').toggle();
-  })
+  });
 
 
   $('#input').keyup(function(e){
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       var content = $(this).val();
       $.post('/create', {description: content},function(res){
         console.log('res =', res);
