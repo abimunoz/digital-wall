@@ -1,4 +1,9 @@
 $(document).ready(function(){
+  $('#add').click(function(e){
+    $('#input').toggle();
+  })
+
+
   $('#input').keyup(function(e){
     if (e.keyCode == 13) {
       var content = $(this).val();
