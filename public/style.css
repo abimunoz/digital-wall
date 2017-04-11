@@ -53,7 +53,6 @@ html body {
   background: white;
   position: relative;
   float:right;
-  /*z-index: 2;*/
 }
 
 .edit {
@@ -77,3 +76,5 @@ form, li, button {
 li {
   list-style-type: none;
 }
+
+button:focus {outline:0;}
