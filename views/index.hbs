@@ -5,17 +5,21 @@
       <h1 id="title">digital<br />wall</h1>
       <ul id="all-posts">
         {{#each posts}}
-        <form method="post" action="/delete/{{_id}}"><button class="remove">X</button></form>
-        <li>
-          <div class="edit" contenteditable="true" id="{{_id}}">
-            {{{description}}}
+          <div class="x">
+            <form method="post" action="/delete/{{_id}}"><button class="remove">X</button></form>
           </div>
-        </li>
+          <div class="content">
+            <li>
+              <div class="edit" contenteditable="true" id="{{_id}}">
+                {{{description}}}
+              </div>
+            </li>
+          </div>
         {{/each}}
       </ul>
       <div id="addContent">
         <button id="add">+</button>
-        <input id="input" class="form-control" placeholder="multimedia">
+        <input id="input" class="form-control" placeholder="embed media, press enter">
       </div>
     </div>
     <div class="col-md-2"></div>

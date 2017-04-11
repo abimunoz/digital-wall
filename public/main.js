@@ -11,14 +11,17 @@ $(document).ready(function(){
         console.log('res =', res);
         console.log('content', content);
       var post = (`
-        <form method=post action="/delete/${res}">
-          <button class="remove">X</button>
-        </form>
-        <li>
-          <div class="edit" contenteditable="true">
-            ${content}
-          </div>
-        </li>`);
+        <div class="x">
+          <form method=post action="/delete/${res}"><button class="remove">X</button></form>
+        </div>
+        <div class="content">
+          <li>
+            <div class="edit" contenteditable="true">
+              ${content}
+            </div>
+          </li>
+        </div>`
+      );
       $('#all-posts').append(post);
       e.currentTarget.value = " "
       })
