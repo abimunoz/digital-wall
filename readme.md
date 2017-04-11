@@ -27,6 +27,7 @@ HTML | CSS | JavaScript | jQuery | AJAX | MongoDB | Express | Handlebars.js | No
 For this project I focused on creating custom CSS and implementing a user interface that was easy to navigate and use. The design of this application was was guided by the user stories.
 
 **USER STORIES**
+
 Digital Wall user stories
 * As a user I want to be able to embed multimedia
 * As a user I want to be able to update text
