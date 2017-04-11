@@ -12,7 +12,7 @@ $(document).ready(function(){
         console.log('content', content);
       var post = (`
         <form method=post action="/delete/${res}">
-          <button>X</button>
+          <button class="remove">X</button>
         </form>
         <li>
           <div class="edit" contenteditable="true">

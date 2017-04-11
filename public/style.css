@@ -13,26 +13,18 @@ html body {
   margin: 30px;
 }
 
-button {
+.remove {
   background: transparent;
   border: none;
   color: blue;
   font-size: 10px;
-  z-index: 2;
 }
 
 #addContent {
-  /*height: 50px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #00A;*/
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  /*top: 20px;*/
   z-index: 2;
   display: inline-block;
 }
