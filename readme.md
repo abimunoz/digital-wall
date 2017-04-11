@@ -1,16 +1,16 @@
-# [TO DO](https://floating-harbor-32363.herokuapp.com/)
-Full-stack web application where users can create, edit and delete to-dos, built during a one week sprint
+# [DIGITAL WALL](https://floating-harbor-32363.herokuapp.com/)
+Web app where users can add text, images, gifs, video and audio from a single input
 
 ![](assets/assets1.png?raw=true)
 
 
 ## OVERVIEW
-This is my first web app. The goal of this project was to incorporate the four basic functions of persistent storage: create, read, update, and delete.
+This is the first web app that I created. It began as a very basic to-do app that incorporated the four basic functions of [persistent storage](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete): create, read, update, and delete. After completing the to-to app successfully, the project continued to evolved, now it renders text as well as a variety of media from a single input.
 
 ## INSTALLATION
 **TECHNOLOGIES USED**
 
-HTML5 | CSS3 | JavaScript | jQuery | AJAX | MongoDB | Express | Handlebars.js | Node.js
+HTML | CSS | JavaScript | jQuery | AJAX | MongoDB | Express | Handlebars.js | Node.js | Bootstrap
 
 * Clone or fork this repository
 
@@ -27,7 +27,13 @@ HTML5 | CSS3 | JavaScript | jQuery | AJAX | MongoDB | Express | Handlebars.js | 
 For this project I focused on creating custom CSS and implementing a user interface that was easy to navigate and use. The design of this application was was guided by the user stories.
 
 **USER STORIES**
+Digital Wall user stories
+* As a user I want to be able to embed multimedia
+* As a user I want to be able to update text
+* As a user I want to be able to delete individual posts
+* As a user I want to be able to view all of the content that has been posted
 
+To-do user stories
 * As a user I want to be able to create a new to-do
 * As a user I want to be able to update my to-dos
 * As a user I want to be able to delete individual to-dos
@@ -35,9 +41,12 @@ For this project I focused on creating custom CSS and implementing a user interf
 
 **USER INTERFACE**
 
-Screenshots that illustrate the evolution of the user interface
+Screenshots that illustrate the evolution of the user interface, from to-do to Digital Wall.
 
 ![](assets/assets2.png?raw=true)
 ![](assets/assets3.png?raw=true)
 ![](assets/assets4.png?raw=true)
 ![](assets/assets5.png?raw=true)
+![](assets/assets6.png?raw=true)
+![](assets/assets7.png?raw=true)
+![](assets/assets8.png?raw=true)

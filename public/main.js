@@ -3,7 +3,6 @@ $(document).ready(function(){
     $('#input').toggle();
   });
 
-
   $('#input').keyup(function(e){
     if (e.keyCode === 13) {
       var content = $(this).val();
@@ -27,7 +26,6 @@ $(document).ready(function(){
       })
     }
   });
-
 
   $('#all-posts').on('keyup', '.edit', function(e){
     if (e.keyCode === 13) {
