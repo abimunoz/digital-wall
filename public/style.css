@@ -13,7 +13,7 @@ body {
   margin: 30px;
 }
 
-#addingContent {
+#addContent {
   /*height: 50px;
   position: absolute;
   bottom: 0;
@@ -26,10 +26,11 @@ body {
   right: 0;
   /*top: 20px;*/
   z-index: 2;
+  display: inline-block;
 }
 
 #add {
-  /*display: inline-block;*/
+  display: inline-block;
   color: blue;
   padding: 15px;
   border: none;
@@ -45,21 +46,21 @@ body {
 
 
 #input {
-  /*display: inline-block;*/
+  display: inline-block;
   /*background: transparent;*/
-  background: white;
+  display: none;
+  background: #e8d6ff;
   border: none;
-  border-bottom: 1px solid #FFFFFF;
+  /*border-bottom: 5px solid #FFFFFF;*/
   font-size: 15px;
   letter-spacing: 6px;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   padding: 15px;
-  border: none;
   font-size: 20px;
   font-weight: bold;
-  background: none;
   position: relative;
+  width: 100%;
 }
 
 .edit {
